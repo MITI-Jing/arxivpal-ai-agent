@@ -1,0 +1,6 @@
+# Ignore environment variable secrets
+.env
+venv/
+*.dll
+*.lib
+venv/

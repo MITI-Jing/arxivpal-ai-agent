@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+datasets
+langchain
+openai
+faiss-cpu
+sentence-transformers
+python-multipart
+streamlit
+python-dotenv
+streamlit
+requests
+
