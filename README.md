@@ -68,6 +68,7 @@ OPENAI_API_KEY=your_openai_key_here
 Start Backend (FastAPI)
 ```bash
 uvicorn backend.app:app --reload
+```
 
 Start Frontend (Streamlit)
 ```bash
