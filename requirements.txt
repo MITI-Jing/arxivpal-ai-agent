@@ -10,4 +10,6 @@ streamlit
 python-dotenv
 streamlit
 requests
-
+langchain-community
+langchain-huggingface
+langchain-openai

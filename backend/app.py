@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
-from data_loader import get_sample_paper
-from rag_pipeline import chunk_article, create_vectorstore
-from qa_agent import build_qa_chain
+from .data_loader import get_sample_paper
+from .rag_pipeline import chunk_article, create_vectorstore
+from .qa_agent import build_qa_chain
 from dotenv import load_dotenv
 import uvicorn
 

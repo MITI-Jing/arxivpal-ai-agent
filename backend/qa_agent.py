@@ -1,6 +1,6 @@
 from langchain.chains import RetrievalQA
-from langchain.chat_models import ChatOpenAI  # for OpenAI
-# from langchain.llms import HuggingFaceHub  # or your own model
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 import os
 

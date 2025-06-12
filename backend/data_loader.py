@@ -6,6 +6,6 @@ def get_sample_paper(index=0):
 
 if __name__ == "__main__":
     article, abstract = get_sample_paper()
-    print("Article snippet:", article[:500])
+    print("Article snippet:", article[501:1500])
     print("Abstract:", abstract)
     print("Total papers in sample:", len(get_sample_paper())) 
