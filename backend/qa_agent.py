@@ -8,7 +8,7 @@ load_dotenv()
 
 def build_qa_chain(vectorstore):
     llm = ChatOpenAI(
-        model_name="gpt-3.5-turbo",  # or "gpt-4" if you have access
+        model_name="gpt-4.1",  # or "gpt-4" if you have access
         temperature=0,
         openai_api_key=os.getenv("OPENAI_API_KEY")
     )
