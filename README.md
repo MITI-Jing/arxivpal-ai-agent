@@ -18,7 +18,7 @@
 
 ## 📸 Preview
 
-![screenshot](./assets/Screenshot streamlit.png)
+![screenshot](./assets/screenshot_streamlit.png)
 
 ---
 
