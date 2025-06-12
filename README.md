@@ -1,73 +1,102 @@
+# 🤖 ArxivPal AI Research Agent
 
-# ArxivPal AI Agent
-
-**ArxivPal** is an AI-powered assistant designed to summarize and answer questions on academic papers from the [arXiv](https://arxiv.org/) repository using state-of-the-art natural language processing techniques.
+**ArxivPal** is an AI-powered agent prototype that extracting key insights and answers natural language questions using Retrieval-Augmented Generation (RAG) on academic papers from the [arXiv](https://arxiv.org/).Built with OpenAI, LangChain, FastAPI, and Streamlit.
 
 ---
 
-## Features
+## 🚀 Features
 
-- Summarizes academic papers automatically
-- Supports natural language queries about paper content
-- Retrieval-Augmented Generation (RAG) for contextual answers
-- Modular FastAPI backend with Streamlit frontend
+- 🧠 **LLM-Powered QA** – Ask questions about academic papers using OpenAI models.
+- 🔍 **RAG Pipeline** – Retrieves relevant chunks and grounds answers in the source.
+- 📚 **Built on Real Papers** – Uses the [`ccdv/arxiv-summarization`](https://huggingface.co/datasets/ccdv/arxiv-summarization) dataset.
+- 📂 **(Coming Soon)**: Upload and analyze any research paper.
+- 🪄 Expandable source context with every answer.
+- 💬 Persistent chat history per paper.
+- 🐳 Docker-ready for easy deployment.
 
+---
 
-## Getting Started
+## 🏗️ Tech Stack
 
-### Prerequisites
+| Layer         | Tools Used                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| LLM & Embedding | `OpenAI GPT-3.5/4`, `text-embedding-ada-002`                              |
+| RAG & Vector DB | `LangChain`, `FAISS`, `ccdv/arxiv-summarization`                         |
+| Backend       | `FastAPI`                                                                  |
+| Frontend      | `Streamlit`                                                                |
+| Secrets       | `.env` with `python-dotenv`                                                |
+| Containerization | `Docker` (in progress)                                                  |
 
-- Python 3.8+
-- Git
+---
 
+## 🔧 Setup Instructions
 
-### Installation
+### 1. Clone the Repo
 
-1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/arxivpal-ai-agent.git
+cd arxivpal-ai-agent
 
-   git clone https://github.com/MITI-Jing/arxivpal-ai-agent.git
-   cd arxivpal-ai-agent
-(Optional) Create and activate a Python virtual environment:
-
+2. Create Virtual Environment
+bash
+Copy
+Edit
 python -m venv venv
-source venv/bin/activate   # Linux/macOS
-.\venv\Scripts\activate    # Windows PowerShell
+source venv/bin/activate  # or `.\venv\Scripts\activate` on Windows
 
-2. Install dependencies:
-
+3. Install Dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
 
-3. Running locally
-Start the FastAPI backend:
+4. Set Up .env File
+Create a .env file in the root folder:
 
+env
+Copy
+Edit
+OPENAI_API_KEY=your_openai_key_here
+🔐 Make sure .env is in your .gitignore!
+
+5. Run the App
+Start Backend (FastAPI)
+bash
+Copy
+Edit
 uvicorn backend.app:app --reload
+Start Frontend (Streamlit)
+bash
+Copy
+Edit
+streamlit run streamlit_app.py
 
-4. Start the Streamlit frontend:
+🐳 Docker (Coming Soon)
 
-streamlit run app.py
-
-Project Structure
-
+📂 File Structure
+bash
+Copy
+Edit
 arxivpal-ai-agent/
-├── backend/                  # FastAPI backend and core logic
-│   ├── __init__.py           # Package initialization
-│   ├── app.py                # FastAPI application entry point
-│   ├── data_loader.py        # Data loading utilities
-│   ├── qa_agent.py           # Question-answering agent logic
-│   ├── rag_pipeline.py       # Retrieval-Augmented Generation pipeline
-│   └── test_rag_qa.py        # Unit tests for RAG QA pipeline
-├── frontend/                 # Streamlit frontend app
-│   └── streamlit_app.py      # Streamlit UI and user interaction
-├── data/                     # Dataset and resource files
-├── Dockerfile                # Docker container setup
-├── README.md                 # Project documentation
-└── requirements.txt          # Python dependencies
+├── backend/
+│   ├── _init_.py               # Package initialization
+│   ├── app.py                  # FastAPI app
+│   ├── data_loader.py          # Loads and chunks documents
+│   ├── qa_agent.py             # Question-answering agent logic
+│   ├── rag_pipeline.py         # RAG pipeline logic
+│   ├── test_rag_qa.py          # Unit tests for RAG QA pipeline
+├── frontend/
+│   ├── streamlit_app.py        # Streamlit UI and user interaction
+├── .env                        # OpenAI key (not committed)
+├── requirements.txt
+├── README.md
+└── Dockerfile (coming)         # Docker container setup
 
+🙋‍♀️ Author
+Built by Jing Li – a career changer passionate about AI for real-world use cases.
 
-License
-This project is licensed under the MIT License.
+📜 License
+MIT License
 
-Contact
-Created by Jing MITI.
-GitHub: MITI-Jing
-Linkedin: https://www.linkedin.com/in/jingliaideveloper/
+⭐️ Support
+Star the repo if you found it helpful! Reach out or raise an issue for feature requests or bugs.
