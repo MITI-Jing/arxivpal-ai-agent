@@ -16,6 +16,13 @@
 
 ---
 
+## 📸 Preview
+
+![screenshot](./assets/Screenshot streamlit.png)
+
+---
+
+
 ## 🏗️ Tech Stack
 
 | Layer         | Tools Used                                                                 |
@@ -36,47 +43,42 @@
 ```bash
 git clone https://github.com/YOUR_USERNAME/arxivpal-ai-agent.git
 cd arxivpal-ai-agent
+```bash
 
-2. Create Virtual Environment
-bash
-Copy
-Edit
+### 2. Create Virtual Environment
+```bash
 python -m venv venv
 source venv/bin/activate  # or `.\venv\Scripts\activate` on Windows
+```bash
 
-3. Install Dependencies
-bash
-Copy
-Edit
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
+```bash
 
-4. Set Up .env File
+### 4. Set Up .env File
 Create a .env file in the root folder:
-
-env
-Copy
-Edit
+```bash
 OPENAI_API_KEY=your_openai_key_here
+```bash
+
 🔐 Make sure .env is in your .gitignore!
 
-5. Run the App
+### 5. Run the App
 Start Backend (FastAPI)
-bash
-Copy
-Edit
+```bash
 uvicorn backend.app:app --reload
+```bash
+
 Start Frontend (Streamlit)
-bash
-Copy
-Edit
+```bash
 streamlit run streamlit_app.py
+```bash
 
 🐳 Docker (Coming Soon)
 
 📂 File Structure
-bash
-Copy
-Edit
+```bash
 arxivpal-ai-agent/
 ├── backend/
 │   ├── _init_.py               # Package initialization
@@ -91,6 +93,7 @@ arxivpal-ai-agent/
 ├── requirements.txt
 ├── README.md
 └── Dockerfile (coming)         # Docker container setup
+```bash
 
 🙋‍♀️ Author
 Built by Jing Li – a career changer passionate about AI for real-world use cases.
